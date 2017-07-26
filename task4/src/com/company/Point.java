@@ -62,4 +62,17 @@ public class Point extends Figure {
     public double length(Point pt) {
         return (Math.sqrt(Math.pow(super.setX() - pt.setX(),2) + Math.pow(super.setY() - pt.setY(),2)));
     }
+
+    public boolean equals(Object o){
+        if(o == null)
+            return false;
+        if (o == this)
+            return true;
+        if (getClass() != o.getClass())
+            return false;
+        Point e = (Point) o;
+        return (this.setX() == e.setX()) && (this.setY() == e.setY());
+    }
+
+
 }
